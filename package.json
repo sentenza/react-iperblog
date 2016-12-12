@@ -1,0 +1,25 @@
+{
+  "name": "react-iperblog",
+  "version": "0.1.0",
+  "description": "A personal gulp-reactive blog platform, with a 4th gen Bootstrap flavour ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sentenza/react-iperblog.git"
+  },
+  "keywords": [
+    "ReactJS",
+    "Bootstrap",
+    "4",
+    "Gulp"
+  ],
+  "author": "Alfredo Torre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sentenza/react-iperblog/issues"
+  },
+  "homepage": "https://github.com/sentenza/react-iperblog#readme"
+}
