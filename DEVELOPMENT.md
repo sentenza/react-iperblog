@@ -1,31 +1,18 @@
 # Development guide
 
-This boilerplate uses the latest versions of the following libraries:
+Libraries:
 
 - [ReactJS](https://github.com/facebook/react)
 - [React Router](https://github.com/rackt/react-router)
 - [RefluxJS](https://github.com/spoike/refluxjs)
 - [SASS](http://sass-lang.com/)
-- [Gulp](http://gulpjs.com/)
-- [Browserify](http://browserify.org/)
 
-Along with many Gulp libraries (these can be seen in either `package.json`, or at the top of each task in `/gulp/tasks/`).
+## Workflow
 
----
-
-### Running tests
-
-1. If you haven't already, follow steps 1 & 2 above
-2. If you haven't already run `gulp dev` or `npm run build` at least once, run `npm run build`
-3. Run all tests in the `tests/` directory with the `gulp test` command
-  * A single file can be run by specifing an `-f` flag: `gulp test -f <PATH_TO_TEST_FILE>`
-    * In the `PATH_TO_TEST_FILE`, it is possible to omit the `tests/` prefix, as well as the `.test.js` suffix. They will be automatically added if not detected.
-
-##### Code coverage
-
-When running tests, code coverage will be automatically calculated and output to an HTML file using the [Istanbul](https://github.com/gotwarlost/istanbul) library. These files can be seen in the generated `coverage/` directory.
-
----
+- Add code to `src/` and tests to `tests/`.
+- Build and watch changes in `src/` with `npm start`.
+- Lint and build the project with `npm run build`.
+- Run tests with `npm test`.
 
 ### ReactJS
 
