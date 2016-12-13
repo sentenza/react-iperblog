@@ -27,7 +27,7 @@
     },
     "html": {
       "title": "React Iperlog",
-      "description": "A personal gulp-reactive blog platform, with a 4th gen Bootstrap flavour",
+      "description": "A personal Neo reactive blog platform, with a 4th gen Bootstrap flavour and Webpack ready",
       "author": "Alfredo Torre"
     }
   },
