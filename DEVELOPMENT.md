@@ -218,7 +218,19 @@ module.exports = (karma) => karma.set(config);
     "test": "neo test --config karma.custom.js"
   }
 }
+
 ```
+### Killing Node.js still active
+
+If you receive an `Error: listen EADDRINUSE 127.0.0.1:4000` some TCP connection is still active and block Node from starting properly. So, after killing all Node instances, you can find the PID with:
+
+```
+$ netstat -nlp | grep :4000
+tcp        2      0 127.0.0.1:4000          0.0.0.0:*               LISTEN      4104/node
+$ kill -9 4104
+```
+
+Full explanation [here](http://stackoverflow.com/a/14790921/1977778).
 
 ## References
 
