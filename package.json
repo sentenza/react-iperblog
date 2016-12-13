@@ -13,12 +13,18 @@
   "keywords": [
     "ReactJS",
     "Bootstrap",
-    "Gulp"
+    "Webpack"
   ],
   "author": "Alfredo Torre",
-  "license": "MIT",
+  "license": "MPL v2.0",
   "bugs": {
     "url": "https://github.com/sentenza/react-iperblog/issues"
   },
-  "homepage": "https://github.com/sentenza/react-iperblog#readme"
+  "homepage": "https://github.com/sentenza/react-iperblog#readme",
+  "dependencies": {
+    "react-rocket-boilerplate": "git+ssh://git@github.com/jakemmarsh/react-rocket-boilerplate.git"
+  },
+  "devDependencies": {
+    "mozilla-neo": "^2.7.0"
+  }
 }
