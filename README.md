@@ -1,5 +1,7 @@
 # react-iperblog
 
+![Hypercube](http://vignette3.wikia.nocookie.net/uncyclopedia/images/7/72/Hypercube.gif/revision/latest?cb=20091021131902)
+
 ## Features
 
 - React, Redux, React Router
