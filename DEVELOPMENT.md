@@ -1,12 +1,5 @@
 # Development guide
 
-Libraries:
-
-- [ReactJS](https://github.com/facebook/react)
-- [React Router](https://github.com/rackt/react-router)
-- [RefluxJS](https://github.com/spoike/refluxjs)
-- [SASS](http://sass-lang.com/)
-
 ## Workflow
 
 1. Install dependencies: `npm install`
@@ -73,31 +66,31 @@ then modify the `npm start` script to use this custom configuration:
 
 For reference:
 
-- [`config/webpack.core`](https://github.com/mozilla/neo/blob/master/config/webpack.core.js):
+- [`config/webpack.core`](https://github.com/sentenza/react-iperblog/blob/master/config/webpack.core.js):
 The webpack config base used by all other configurations
-- [`config/webpack.dev`](https://github.com/mozilla/neo/blob/master/config/webpack.dev.js):
+- [`config/webpack.dev`](https://github.com/sentenza/react-iperblog/blob/master/config/webpack.dev.js):
 The webpack config used in the development process `npm start`
-- [`config/webpack.test`](https://github.com/mozilla/neo/blob/master/config/webpack.test.js):
+- [`config/webpack.test`](https://github.com/sentenza/react-iperblog/blob/master/config/webpack.test.js):
 The webpack config used when running `npm test`. This config removes any plugins defined in `webpack.core`.
-- [`config/webpack.prod`](https://github.com/mozilla/neo/blob/master/config/webpack.prod.js):
+- [`config/webpack.prod`](https://github.com/sentenza/react-iperblog/blob/master/config/webpack.prod.js):
 The webpack config used when running `npm run build`
 
 Additional configurations to modify or utilize:
 
-- [`config/babel`](https://github.com/mozilla/neo/blob/master/config/babel.js): The Babel presets used internally by default
-- [`config/eslint.core`](https://github.com/mozilla/neo/blob/master/config/eslint.core.js): ESLint default plugins, presets, and rules
-- [`config/eslint.dev`](https://github.com/mozilla/neo/blob/master/config/eslint.dev.js): ESLint development rules overrides
-- [`config/karma`](https://github.com/mozilla/neo/blob/master/config/karma.js): Karma testing and coverage settings
+- [`config/babel`](https://github.com/sentenza/react-iperblog/blob/master/config/babel.js): The Babel presets used internally by default
+- [`config/eslint.core`](https://github.com/sentenza/react-iperblog/blob/master/config/eslint.core.js): ESLint default plugins, presets, and rules
+- [`config/eslint.dev`](https://github.com/sentenza/react-iperblog/blob/master/config/eslint.dev.js): ESLint development rules overrides
+- [`config/karma`](https://github.com/sentenza/react-iperblog/blob/master/config/karma.js): Karma testing and coverage settings
 
 ##### HTML template
 
-Neo uses its own [HTML template](https://github.com/mozilla/neo/blob/master/src/template.ejs)
+Neo uses its own [HTML template](https://github.com/sentenza/react-iperblog/blob/master/src/template.ejs)
 to generate the initial markup for the static page it will render. To specify a
 custom template, create a `template.ejs` file in the `src` directory and Neo
 will pick it up automatically. In your `package.json` there is a `config.html`
 section where you can specify custom variables for your template. These values
 can be accessed via `htmlWebpackPlugin.options.custom_variable_name`. See the
-default [HTML template](https://github.com/mozilla/neo/blob/master/src/template.ejs)
+default [HTML template](https://github.com/sentenza/react-iperblog/blob/master/src/template.ejs)
 for an demonstration of this usage.
 
 #### Transpiling
@@ -234,6 +227,9 @@ Full explanation [here](http://stackoverflow.com/a/14790921/1977778).
 
 ## References
 
+- [ReactJS](https://github.com/facebook/react)
+- [React Router](https://github.com/rackt/react-router)
+- FLUX
 - [Webpack](https://webpack.github.io/)
 - [Webpack Dev Server](https://webpack.github.io/docs/webpack-dev-server.html)
 - [React Hot Loader](https://github.com/gaearon/react-hot-loader)
@@ -244,7 +240,7 @@ Full explanation [here](http://stackoverflow.com/a/14790921/1977778).
 - [ESLint](http://eslint.org/)
 - [Babel](http://babeljs.io/)
 - [ES2015](https://babeljs.io/learn-es2015/)
-
+- [SASS](http://sass-lang.com/)
 
 ### ReactJS
 
@@ -273,25 +269,6 @@ Routes.js (Defines the routing structure, along with each individual route path 
 ```
 
 Each module you add to your project should be placed in the appropriate directory, and required in the necessary files. Once required, they will be automatically detected and compiled by Browserify (discussed later).
-
----
-
-### RefluxJS
-
-RefluxJS is a "simple library for unidirectional dataflow architecture inspired by ReactJS Flux."
-
-"The pattern is composed of actions and data stores, where actions initiate new data to pass through data stores before coming back to the view components again. If a view component has an event that needs to make a change in the application's data stores, they need to do so by signalling to the stores through the actions available."
-
-The RefluxJS files are also all locationed within `/app/js`, structured in the following manner:
-
-```
-/actions
-  - CurrentUserActions.js (Possible actions relevant to the current user. i.e. `checkAuth`, `login`, and `logout`.)
-/stores
-  - CurrentUserStore.js (Responsible for storing the current user data, while listening to any `CurrentUserActions`.)
-```
-
-Each action or store you add to your project should be placed in the appropriate directory, and required in the necessary files. The necessary logic to trigger actions and listen to stores should also be added.
 
 ---
 
