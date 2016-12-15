@@ -16,7 +16,7 @@
 
 ## Key concepts
 
-* The kick start for this project comes from [Mozilla Neo](https://github.com/mozilla/neo)
+* The kick start for this project comes from [Mozilla Neo](https://github.com/mozilla/neo) ([Introduction](https://blog.eliperelman.com/neo-8bf3d7325f7#.ibzn27hvn))
 * [Bootstrap 4](https://github.com/twbs/bootstrap) will be used as the main front-end framework
 * [Blockstack-boostrap](https://github.com/blockstack/blockstack-bootstrap) theme (read more about [BlockStack](https://speakerdeck.com/ryanshea/decentralized-server-less-applications-with-blockstack-all-things-open)
 
